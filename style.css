@@ -1,3 +1,9 @@
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
 /* Reset some default spacing */
 * {
   margin: 0;
@@ -236,6 +242,46 @@ section {
   white-space: nowrap;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  background-color: #3692ee;
+  color: white;
+  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+
+.logo img {
+  height: 60px;
+}
+
+.title {
+  flex: 1;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
 .navbar-links {
   display: flex;
   gap: 30px;
@@ -260,40 +306,6 @@ section {
 
 .navbar-links a:hover::after {
   width: 100%;
-}
-
-
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 50px;
-  background-color: #3692ee; /* Light blue */
-  color: white;
-  font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-}
-
-.logo img {
-  height: 60px;
-}
-
-.title {
-  flex: 1;
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.nav-links {
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
 }
 
 .nav-links a:hover {
@@ -367,4 +379,87 @@ section {
 
 .register-btn:hover {
   background-color: #218838; /* Darker green on hover */
+}
+
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 32px;
+  }
+
+  .site-title {
+    font-size: 28px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    padding: 10px 20px;
+  }
+
+  .navbar-links {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .hero h2 {
+    font-size: 20px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .register-btn {
+    padding: 10px 18px;
+    font-size: 14px;
+  }
+
+  .services, .about, .contact-section {
+    padding: 15px 8px;
+  }
+
+  .contact-section h2 {
+    font-size: 20px;
+  }
+
+  .branding span {
+    font-size: 1.2em;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .video-wrapper {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  }
+}
+
+
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.navbar-links a {
+  display: inline-block;
+  white-space: nowrap;
+}
+
+
+.navbar {
+  flex-wrap: wrap;
+  overflow-x: visible;
 }
